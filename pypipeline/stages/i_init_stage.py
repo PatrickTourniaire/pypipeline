@@ -19,3 +19,9 @@ class IInitStage(IBaseStage[I, O], Generic[I, O, N]):
 
     def get_output(self) -> Tuple[N, O]:
         pass
+
+    def input_schema(self) -> I:
+        return self._types[0]
+
+    def output_schema(self) -> O:
+        return self._types[1]
