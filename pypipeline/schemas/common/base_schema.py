@@ -44,7 +44,7 @@ class BaseSchema:
     def _get_field_types(self, schema: dataclass) -> dict:
         return {v.name: v.type for v in fields(schema)}
 
-    def get_artifact(self) -> dataclass:
+    def get_artifact(self) -> ArtifactSchema:
         _perishables = self._get_perishables(schema=self)
         _base_fields = self._get_fields(schema=self)
 
