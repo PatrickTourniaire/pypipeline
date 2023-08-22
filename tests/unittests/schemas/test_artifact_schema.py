@@ -48,3 +48,20 @@ class BasicFieldsTestCase(unittest.TestCase):
         self.assertIsInstance(self._dataclass.A, str)
         self.assertIsInstance(self._dataclass.B, dict)
         self.assertIsInstance(self._dataclass.C, list)
+
+
+class StandardFieldsTestCase(unittest.TestCase):
+    """Test case for ensuring that the returned standard fields are correct"""
+
+    @dataclass
+    class TestDataclass(ArtifactSchema):
+        A: str
+        B: dict
+        C: list
+
+    def setUp(self) -> None:
+        self._data = {"A": "A", "B": {}, "C": []}
+        self._dataclass = self.TestDataclass(source_schema=None, **self._data)
+
+    def test_standard_fields(self):
+        self.assertEqual(self._dataclass, ["source_schema"])
