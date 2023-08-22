@@ -64,4 +64,4 @@ class StandardFieldsTestCase(unittest.TestCase):
         self._dataclass = self.TestDataclass(source_schema=None, **self._data)
 
     def test_standard_fields(self):
-        self.assertEqual(self._dataclass, ["source_schema"])
+        self.assertEqual(self._dataclass.get_standard_fields(), ["source_schema"])
