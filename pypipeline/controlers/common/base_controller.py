@@ -77,12 +77,20 @@ class BaseController:
             # Compute and get next output
             stage.compute()
             stage, output = stage.get_output()
+
+            if isinstance(stage, type):
+                raise ReferenceError(
+                    "The get_object method needs to return an instance!",
+                    stage
+                )
+
             stage.set_input(output)
 
         # Get terminal output and artifact
+        stage.compute()
         output = stage.get_output()
         self._artifact_cache[run_id][
-            stage.input.__class__.__name__
+            stage.__class__.__name__
         ] = stage.input.get_artifact()
         self._artifact_cache[run_id][stage.__class__.__name__] = output.get_artifact()
 
