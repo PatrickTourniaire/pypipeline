@@ -18,6 +18,7 @@ clean = ["flake8", "pyink", "mypy"]
 python = "^3.10"
 poethepoet = "^0.20.0"
 rich = "^13.5.2"
+PyYAML = {version = '5.4.1', build_constraints = ['Cython < 3.0']}
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
