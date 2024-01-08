@@ -19,6 +19,9 @@ jobs:
 
       - name: Install Poetry
         run: pip install poetry
+      
+      - name: Upgrade PIP
+        run: pip install --upgrade pip
 
       - name: Install dependencies
         run: poetry install
