@@ -36,10 +36,10 @@ defines a simple GMM pipeline. Firstly, we import the relevant packages.
   from dataclasses import dataclass
   from typing import Tuple
 
-  from pypipeline.schemas import BaseSchema
-  from pypipeline.schemas.fields import field_perishable, field_persistance
-  from pypipeline.stages import IInitStage, ITerminalStage, IForwardStage
-  from pypipeline.controlers import BaseController
+  from ror.schemas import BaseSchema
+  from ror.schemas.fields import field_perishable, field_persistance
+  from ror.stages import IInitStage, ITerminalStage, IForwardStage
+  from ror.controlers import BaseController
 ```
 
 Then we can define the schemas which will determine the structure of the data communicated between the different stages.
