@@ -7,9 +7,9 @@ from rich.console import Console
 from rich.table import Table
 
 # Local imports
-from pypipeline.schemas import BaseSchema
-from pypipeline.stages import IInitStage, ITerminalStage
-from pypipeline.stages.common import IBaseStage
+from ror.schemas import BaseSchema
+from ror.stages import IInitStage, ITerminalStage
+from ror.stages.common import IBaseStage
 
 
 class BaseController:

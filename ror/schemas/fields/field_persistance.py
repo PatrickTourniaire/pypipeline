@@ -2,7 +2,7 @@
 from dataclasses import Field, field
 
 # Local imports
-from pypipeline.utils._const import FIELD_PERSISTANCE
+from ror.utils._const import FIELD_PERSISTANCE
 
 
 def field_persistance(**kwargs) -> Field:

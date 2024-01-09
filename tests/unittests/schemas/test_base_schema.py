@@ -3,9 +3,9 @@ import unittest
 from dataclasses import dataclass, fields
 
 # Local imports
-from pypipeline.schemas import ArtifactSchema, BaseSchema
-from pypipeline.schemas.fields import field_perishable, field_persistance
-from pypipeline.utils._const import FIELD_PERSISTANCE
+from ror.schemas import ArtifactSchema, BaseSchema
+from ror.schemas.fields import field_perishable, field_persistance
+from ror.utils._const import FIELD_PERSISTANCE
 
 
 class DataclassTestCase(unittest.TestCase):

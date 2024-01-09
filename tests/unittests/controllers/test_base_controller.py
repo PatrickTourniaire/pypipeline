@@ -3,12 +3,10 @@ import unittest
 from dataclasses import dataclass
 from typing import Tuple
 
-# Local imports
-from pypipeline.schemas import BaseSchema
-from pypipeline.schemas.fields import field_perishable, field_persistance
-from pypipeline.stages import IForwardStage, IInitStage, ITerminalStage
-from pypipeline.controlers.common import BaseController
-
+from ror.controlers.common import BaseController
+from ror.schemas import BaseSchema
+from ror.schemas.fields import field_perishable, field_persistance
+from ror.stages import IForwardStage, IInitStage, ITerminalStage
 
 """=============================== TEST DATA =============================="""
 
@@ -31,7 +29,6 @@ class TerminalOutputTest(BaseSchema):
 
 
 class TerminalStageTest(ITerminalStage[OutputTest, TerminalOutputTest]):
-
     def compute(self) -> None:
         self._output = self.input.get_carry()
 
@@ -39,10 +36,7 @@ class TerminalStageTest(ITerminalStage[OutputTest, TerminalOutputTest]):
         return TerminalOutputTest(**self._output)
 
 
-class ForwardStageTest(
-    IForwardStage[OutputTest, OutputTest, TerminalStageTest]
-):
-
+class ForwardStageTest(IForwardStage[OutputTest, OutputTest, TerminalStageTest]):
     def compute(self) -> None:
         self._output = self.input.__dict__
 
@@ -51,9 +45,8 @@ class ForwardStageTest(
 
 
 class InitStageTest(IInitStage[InputTest, OutputTest, ForwardStageTest]):
-
     def compute(self) -> None:
-        self._output = {**self.input.get_carry(), 'C': 'C'}
+        self._output = {**self.input.get_carry(), "C": "C"}
 
     def get_output(self) -> Tuple[ForwardStageTest, OutputTest]:
         return ForwardStageTest(), OutputTest(**self._output)
@@ -76,7 +69,7 @@ class ForwardPassTestCase(unittest.TestCase):
         output, run_id = self._controller.start()
 
         self.assertIsInstance(output, TerminalOutputTest)
-        self.assertEqual(output.C, 'C')
+        self.assertEqual(output.C, "C")
         self.assertIsInstance(run_id, str)
 
 
@@ -94,29 +87,21 @@ class CheckArtifactsTestCase(unittest.TestCase):
         _, run_id = self._controller.start()
         artifacts = self._controller.get_artifacts(run_id)
 
-        self.assertIs(artifacts['InitStageTest'].source_schema, InputTest)
+        self.assertIs(artifacts["InitStageTest"].source_schema, InputTest)
         self.assertSetEqual(
-            set(
-                artifacts['InitStageTest'].__dict__.keys()
-            ) - set(['source_schema']),
-            set(['B'])
+            set(artifacts["InitStageTest"].__dict__.keys()) - set(["source_schema"]),
+            set(["B"]),
         )
 
-        self.assertIs(artifacts['ForwardStageTest'].source_schema, OutputTest)
+        self.assertIs(artifacts["ForwardStageTest"].source_schema, OutputTest)
         self.assertSetEqual(
-            set(
-                artifacts['ForwardStageTest'].__dict__.keys()
-            ) - set(['source_schema']),
-            set(['A'])
+            set(artifacts["ForwardStageTest"].__dict__.keys()) - set(["source_schema"]),
+            set(["A"]),
         )
 
-        self.assertIs(
-            artifacts['TerminalStageTest'].source_schema,
-            TerminalOutputTest
-        )
+        self.assertIs(artifacts["TerminalStageTest"].source_schema, TerminalOutputTest)
         self.assertSetEqual(
-            set(
-                artifacts['TerminalStageTest'].__dict__.keys()
-            ) - set(['source_schema']),
-            set()
+            set(artifacts["TerminalStageTest"].__dict__.keys())
+            - set(["source_schema"]),
+            set(),
         )

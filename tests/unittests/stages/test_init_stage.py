@@ -4,10 +4,10 @@ from dataclasses import dataclass
 from typing import Tuple, get_args
 
 # Local imports
-from pypipeline.schemas import BaseSchema
-from pypipeline.schemas.fields import field_perishable, field_persistance
-from pypipeline.stages import IForwardStage, IInitStage, ITerminalStage
-from pypipeline.stages.common import IBaseStage
+from ror.schemas import BaseSchema
+from ror.schemas.fields import field_perishable, field_persistance
+from ror.stages import IForwardStage, IInitStage, ITerminalStage
+from ror.stages.common import IBaseStage
 
 
 @dataclass

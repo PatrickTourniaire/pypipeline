@@ -3,9 +3,9 @@ import unittest
 from dataclasses import dataclass
 
 # Local imports
-from pypipeline.schemas import BaseSchema
-from pypipeline.schemas.fields import field_perishable, field_persistance
-from pypipeline.stages.common import IBaseStage
+from ror.schemas import BaseSchema
+from ror.schemas.fields import field_perishable, field_persistance
+from ror.stages.common import IBaseStage
 
 
 @dataclass

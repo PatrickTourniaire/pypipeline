@@ -3,7 +3,7 @@ from dataclasses import dataclass, fields, make_dataclass
 from typing import List, Set
 
 # Local imports
-from pypipeline.utils._const import FIELD_PERSISTANCE
+from ror.utils._const import FIELD_PERSISTANCE
 
 from .artifact_schema import ArtifactSchema
 

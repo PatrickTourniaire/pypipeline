@@ -1,34 +1,47 @@
-name: Publish to PyPI
-
 #on:
 #  push:
 #    tags:
 #      - "*"
 
+# on:
+#   push:
+#     branches: ["main"]
+
+# jobs:
+#   publish:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+
+#       - name: Set up Python
+#         uses: actions/setup-python@v3
+#         with:
+#           python-version: 3.x
+
+#       - name: Install Poetry
+#         run: pip install poetry
+
+#       - name: Install dependencies
+#         run: poetry install
+
+#       - name: Build package
+#         run: poetry build
+
+#       - name: Publish to PyPI
+#         run: poetry publish --build -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_API_TOKEN }}
+
+name: Python package
 on:
   push:
-    branches: ["main"]
-
+    tags:
+      - "v*.*.*"
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v3
+      - uses: actions/checkout@v3
+      - name: Build and publish to pypi
+        uses: JRubics/poetry-publish@v1.17
         with:
-          python-version: 3.x
-
-      - name: Install Poetry
-        run: pip install poetry
-
-      - name: Install dependencies
-        run: poetry install
-
-      - name: Build package
-        run: poetry build
-
-      - name: Publish to PyPI
-        run: poetry publish --build -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_API_TOKEN }}
+          pypi_token: ${{ secrets.PYPI_API_TOKEN }}

@@ -3,8 +3,8 @@ import unittest
 from dataclasses import Field
 
 # Local imports
-from pypipeline.schemas.fields import field_perishable
-from pypipeline.utils._const import FIELD_PERSISTANCE
+from ror.schemas.fields import field_perishable
+from ror.utils._const import FIELD_PERSISTANCE
 
 
 class MetaDataTestCase(unittest.TestCase):
