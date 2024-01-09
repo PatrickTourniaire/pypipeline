@@ -1,7 +1,11 @@
 <h1 align="center"> ROR </h1>
 
 <div align="center">
-![Unittesting](https://github.com/patricktourniaire/pypipeline/actions/workflows/python-unittesting.yml/badge.svg) [![Documentation](https://github.com/PatrickTourniaire/pypipeline/actions/workflows/documentation.yml/badge.svg)](https://github.com/PatrickTourniaire/pypipeline/actions/workflows/documentation.yml) [![PyPI Deployment](https://github.com/PatrickTourniaire/pypipeline/actions/workflows/python-release-pypi.yml/badge.svg)](https://github.com/PatrickTourniaire/pypipeline/actions/workflows/python-release-pypi.yml)
+
+<a href="">![Unittesting](https://github.com/patricktourniaire/pypipeline/actions/workflows/python-unittesting.yml/badge.svg)</a>
+<a href="">[![Documentation](https://github.com/PatrickTourniaire/pypipeline/actions/workflows/documentation.yml/badge.svg)](https://github.com/PatrickTourniaire/pypipeline/actions/workflows/documentation.yml)</a>
+<a href="">[![PyPI Deployment](https://github.com/PatrickTourniaire/pypipeline/actions/workflows/python-release-pypi.yml/badge.svg)](https://github.com/PatrickTourniaire/pypipeline/actions/workflows/python-release-pypi.yml)</a>
+
 </div>
 
 project_description
