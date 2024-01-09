@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/source/_static/logo_blue.png" height=50 />
+</p>
+
 <h1 align="center"> ROR </h1>
 
 <div align="center">
