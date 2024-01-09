@@ -15,7 +15,7 @@ clean = ["flake8", "pyink", "mypy"]
 
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8.1,<4.0"
 
 rich = "^13.5.2"
 pyyaml = "^5.3.1"
