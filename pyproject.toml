@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ror"
-version = "0.1.2-alpha"
+version = "v0.1.0"
 description = "Simple pipelining framework in Python"
 authors = ["Patrick Tourniaire <patrick@tourniaire.net>"]
 readme = "README.md"
