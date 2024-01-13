@@ -1,5 +1,5 @@
-Schemas
-==========================
+ror.controlers package
+======================
 
 Subpackages
 -----------
@@ -7,13 +7,12 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   pypipeline.schemas.common
-   pypipeline.schemas.fields
+   ror.controlers.common
 
 Module contents
 ---------------
 
-.. automodule:: pypipeline.schemas
+.. automodule:: ror.controlers
    :members:
    :undoc-members:
    :show-inheritance:

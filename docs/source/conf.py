@@ -17,10 +17,10 @@ sys.path.insert(0, os.path.abspath(".."))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "pypipeline"
+project = "ror"
 copyright = "2023, Patrick Tourniaire"
 author = "Patrick Tourniaire"
-release = "0.1.0"
+release = "v0.1.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -41,7 +41,7 @@ exclude_patterns = []
 html_permalinks_icon = "<span>#</span>"
 html_theme = "sphinxawesome_theme"
 html_static_path = ["_static"]
-html_title = "pypipeline"
+html_title = "ror"
 
 html_theme_options = {
     # Add main navigation

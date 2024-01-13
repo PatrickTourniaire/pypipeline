@@ -15,7 +15,7 @@ To build from source we recommend that you use **poetry**, however, this is **no
 Installation Process
 --------------------
 
-To install **pypipeline** the process is simple, below select the most applicable approach for your project and follow the associated
+To install **ror** the process is simple, below select the most applicable approach for your project and follow the associated
 instructions to install.
 
 PIP Installation
@@ -24,7 +24,7 @@ To install from the PyPI repository, run the following command.
 
 .. code-block:: bash
 
-   pip install pypipeline
+   pip install ror
 
 Build from Source
 ^^^^^^^^^^^^^^^^^
@@ -33,7 +33,7 @@ To build directly from source you can use the following commands.
 
 .. code-block:: bash
 
-   git clone https://github.com/PatrickTourniaire/pypipeline.git && cd pypipeline
+   git clone https://github.com/PatrickTourniaire/ror.git && cd ror
    poetry install
    poetry build
-   pip install ./dist/pypipeline-<VERSION_CODE>-py3-none-any.whl
+   pip install ./dist/ror-<VERSION_CODE>-py3-none-any.whl

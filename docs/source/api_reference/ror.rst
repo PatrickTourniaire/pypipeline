@@ -1,5 +1,5 @@
-Controlers
-==========
+ror package
+===========
 
 Subpackages
 -----------
@@ -7,12 +7,15 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   pypipeline.controlers.common
+   ror.controlers
+   ror.schemas
+   ror.stages
+   ror.utils
 
 Module contents
 ---------------
 
-.. automodule:: pypipeline.controlers
+.. automodule:: ror
    :members:
    :undoc-members:
    :show-inheritance:

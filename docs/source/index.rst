@@ -1,4 +1,4 @@
-.. pypipeline documentation master file, created by
+.. ror documentation master file, created by
    sphinx-quickstart on Sat Dec 23 09:03:59 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -9,7 +9,7 @@
    Warning! This project is not in stable release yet (version **v0.1.0**).
 
 
-Welcome to pypipeline!
+Welcome to ror!
 ======================================
 
 
@@ -17,13 +17,13 @@ Welcome to pypipeline!
    :align: center
    :class: only-dark
 
-   A simple example of a pipeline defined using the pypipeline framework.
+   A simple example of a pipeline defined using the ror framework.
 
 
 Overview
 --------
 
-Welcome to the **pypipeline** project, which proposes a more customizable and flexible way to create
+Welcome to the **ror** project, which proposes a more customizable and flexible way to create
 pipelines programmatically in Python. You can define simple forward propagating pipelines where the
 input of the first stage is computed on and then passed to the next stage until you reach a terminal
 stage. Which makes it easier to have a good separation of concern when constructing complex inference
@@ -33,7 +33,7 @@ logic in ML projects.
 Key Features
 ------------
 
-The current version of pypipeline is **v0.1.0** and supports the following features:
+The current version of ror is **v0.1.0** and supports the following features:
 
 * 🏗 **Forward Pipelines:** Supports simple forward passing pipelines with a separation of concern for each pipeline stage.
 * 🚀 **Robust ML Pipelines Faster:** Parallelize the work of an entire pipeline by developing stages independently which can be linked at the end.
@@ -71,7 +71,7 @@ Contents
    :maxdepth: 2
    :caption: 📚 API Reference
 
-   api_reference/pypipeline
+   api_reference/ror
 
 
 

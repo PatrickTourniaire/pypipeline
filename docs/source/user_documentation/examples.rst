@@ -3,13 +3,13 @@
 Example
 ========
 
-This tutorial will cover a very practical example of how **pypipeline** can be applied to some inference pipeline.
+This tutorial will cover a very practical example of how **ror** can be applied to some inference pipeline.
 For this case we will be using the simple Iris dataset from sklearn along with a GMM as our model.
 
-.. admonition:: Use pypipeline for more complex problems
+.. admonition:: Use ror for more complex problems
    :class: tip
 
-   pypipeline is a great tool for managing a good seperation of concern in complex inferenece pipelines, however, for very
+   ror is a great tool for managing a good seperation of concern in complex inferenece pipelines, however, for very
    simple problems such as the one presented on this page, it will only add more boiler-plate code which is not worth it for
    very simple problems.
 
@@ -32,10 +32,10 @@ all the relevant modules for this tutorial.
   from dataclasses import dataclass
   from typing import Tuple
 
-  from pypipeline.schemas import BaseSchema
-  from pypipeline.schemas.fields import field_perishable, field_persistance
-  from pypipeline.stages import IInitStage, ITerminalStage, IForwardStage
-  from pypipeline.controlers import BaseController
+  from ror.schemas import BaseSchema
+  from ror.schemas.fields import field_perishable, field_persistance
+  from ror.stages import IInitStage, ITerminalStage, IForwardStage
+  from ror.controlers import BaseController
 
 Then we can define the data schemas. We know that we can simply load the Iris dataset from sklearn, and we should standardise
 the dataset, so we account for this in our data schemas.
@@ -71,7 +71,7 @@ Linking Stages
 --------------
 
 Based on these schemas we allready have a decent idea of how we should link the stages, and we can do this very simply using
-the provided interfaces from **pypipeline**.
+the provided interfaces from **ror**.
 
 .. code-block:: python
   :caption: Defining Stages
@@ -182,11 +182,11 @@ of the controller to get the output and the final visualisation of the predictio
 
 With this we should get the following output.
 
-.. figure:: ../_static/gmm_pypipeline.png
+.. figure:: ../_static/gmm_ror.png
    :align: center
    :class: only-dark
 
-   Visualisation of the results from our GMM model defined with **pypipeline**.
+   Visualisation of the results from our GMM model defined with **ror**.
 
-Congratulations you defined your first **pypipeline**! As mentioned above this library is meant for more complex
-inference pipelines, however, I hope this served as a gentle introduction into how **pypipeline** works.
+Congratulations you defined your first **ror**! As mentioned above this library is meant for more complex
+inference pipelines, however, I hope this served as a gentle introduction into how **ror** works.

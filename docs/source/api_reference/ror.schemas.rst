@@ -1,7 +1,5 @@
-
-
-API Documentation
-==================
+ror.schemas package
+===================
 
 Subpackages
 -----------
@@ -9,14 +7,13 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   pypipeline.controlers
-   pypipeline.schemas
-   pypipeline.stages
+   ror.schemas.common
+   ror.schemas.fields
 
 Module contents
 ---------------
 
-.. automodule:: pypipeline
+.. automodule:: ror.schemas
    :members:
    :undoc-members:
    :show-inheritance:
