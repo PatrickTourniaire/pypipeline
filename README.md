@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/source/_static/logo_blue.png" height=50 />
+  <img src="https://github.com/PatrickTourniaire/ror/blob/main/docs/source/_static/logo_blue.png?raw=true" height=50 />
 </p>
 
 <h1 align="center"> ROR </h1>

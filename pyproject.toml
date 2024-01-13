@@ -4,6 +4,10 @@ version = "v0.1.0"
 description = "Simple pipelining framework in Python"
 authors = ["Patrick Tourniaire <patrick@tourniaire.net>"]
 readme = "README.md"
+homepage = "https://patricktourniaire.github.io/ror"
+documentation = "https://patricktourniaire.github.io/ror/api_reference/ror.html"
+repository = "https://github.com/PatrickTourniaire/ror"
+keywords = ["machine-learning", "pipelines", "data-processing"]
 
 
 [tool.poe.tasks]
