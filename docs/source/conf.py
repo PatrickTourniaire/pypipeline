@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath(".."))
 project = "ror"
 copyright = "2023, Patrick Tourniaire"
 author = "Patrick Tourniaire"
-release = "v0.1.0"
+release = "v0.1.1"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

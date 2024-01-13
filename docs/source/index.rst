@@ -6,7 +6,7 @@
 .. admonition:: Not in Stable Release
    :class: caution
 
-   Warning! This project is not in stable release yet (version **v0.1.0**).
+   Warning! This project is not in stable release yet.
 
 
 Welcome to ror!
